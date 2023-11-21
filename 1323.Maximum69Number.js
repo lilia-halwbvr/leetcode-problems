@@ -5,7 +5,6 @@ var maximum69Number  = function(num) {
             a.splice(i, 1, "9");
            break
         }
-
     }
     return Number(a.join(''))
 };
