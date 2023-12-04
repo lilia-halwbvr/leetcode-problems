@@ -20,3 +20,5 @@ var differenceOfSum = function(nums) {
 
 console.log(differenceOfSum([1,15,6,3])) // 9
 console.log(differenceOfSum([1,2,3,4])) // 0
+
+
