@@ -23,7 +23,7 @@ var commonChars = function(words) {
         }
       });
    
-return answer
+    return answer
 };
 
  
