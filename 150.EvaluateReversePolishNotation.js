@@ -6,8 +6,6 @@ var evalRPN = function(tokens) {
             continue
         }
 
-
-    
         let firstNum = stack.pop()
         let secondNum = stack.pop()
         switch(token) {
@@ -15,18 +13,18 @@ var evalRPN = function(tokens) {
                 stack.push(secondNum + firstNum)
                 break;
             case '-':
-            stack.push(secondNum - firstNum)
+                stack.push(secondNum - firstNum)
                 break;
             case '*':
-            stack.push(secondNum * firstNum)
+                stack.push(secondNum * firstNum)
                 break;
             case '/':
-            let div = secondNum / firstNum
-            if(div < 0) {
-                stack.push(Math.ceil(div))
-            } else {
-                stack.push(Math.floor(div))
-            }
+                let div = secondNum / firstNum
+                if(div < 0) {
+                    stack.push(Math.ceil(div))
+                } else {
+                    stack.push(Math.floor(div))
+                }
                 break
         }
     }

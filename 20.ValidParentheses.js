@@ -1,21 +1,23 @@
 var isValid = function(s) {
     s = s.split("");
-    let stack = []
+    const parentheses = new Map([
+        ['}', '{'],
+        [')', '('],
+        [']', '[']
+    ])
 
+    let stack = []
     for(let el of s) {
-        if( el === '(' || el === '[' || el === '{') {
-            
+        if(Array.from(parentheses.values()).includes(el)) {
             stack.push(el)
-            console.log(stack)
         } else {
             let top = stack[stack.length - 1];
-            if(el === ')' && top === '(' || el === ']' && top === '[' || el === '}' && top === '{') {
+            if(top === parentheses.get(el)) {
                 stack.pop()
             } else {
                 return false
             }
         }
-       
     }
     return stack.length === 0
 };
