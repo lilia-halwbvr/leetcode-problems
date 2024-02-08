@@ -1,6 +1,5 @@
 var groupAnagrams = function(strs) {
     let map = new Map()
-    let answer = []
 
     for(let word of strs) {
         let str = word.split('').sort().join('');

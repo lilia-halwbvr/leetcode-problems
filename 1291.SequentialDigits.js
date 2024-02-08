@@ -5,14 +5,12 @@ var sequentialDigits = function(low, high) {
         let num = i
         for(let j = i + 1; j <= 9; j++) {
             num = num * 10 + j
+            console.log(num)
             if(num >= low && num <= high) {
                 answer.push(num)
             }
         }
-
-        
     }
-
     return answer.sort((a, b) => a - b)
 };
 

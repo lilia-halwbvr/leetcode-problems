@@ -2,7 +2,6 @@
 
 var firstUniqChar = function(s) {
    let map = new Map()
-
    for(letter of s) {
         map[letter] = (map[letter] || 0) + 1;
    }
