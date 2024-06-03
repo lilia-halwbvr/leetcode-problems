@@ -22,7 +22,7 @@ var canConstruct = function(ransomNote, magazine) {
     }
 
     return true
-};
+}
 
 
 console.log(canConstruct('a', 'b')) //false
